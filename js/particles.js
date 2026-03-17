@@ -9,13 +9,13 @@ class ParticleNetwork {
         this.ctx = canvas.getContext('2d');
         this.options = Object.assign({
             particleCount: 80,
-            particleColor: '#2E7D32',
-            lineColor: 'rgba(46, 125, 50, 0.3)',
+            particleColor: '#0891B2',
+            lineColor: 'rgba(8, 145, 178, 0.25)',
             particleRadius: 3,
             lineWidth: 1,
             connectionDistance: 150,
             mouseConnectionDistance: 200,
-            speed: 1
+            speed: 0.8
         }, options);
 
         this.particles = [];
@@ -36,8 +36,8 @@ class ParticleNetwork {
     }
 
     resize() {
-        this.canvas.width = this.canvas.offsetWidth;
-        this.canvas.height = this.canvas.offsetHeight;
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
     }
 
     createParticles() {
@@ -125,7 +125,7 @@ class ParticleNetwork {
 
                 if (distance < this.mouse.radius) {
                     this.ctx.beginPath();
-                    this.ctx.strokeStyle = `rgba(46, 125, 50, ${0.6 * (1 - distance / this.mouse.radius)})`;
+                    this.ctx.strokeStyle = `rgba(8, 145, 178, ${0.5 * (1 - distance / this.mouse.radius)})`;
                     this.ctx.lineWidth = this.options.lineWidth * 1.5;
                     this.ctx.moveTo(p1.x, p1.y);
                     this.ctx.lineTo(this.mouse.x, this.mouse.y);
@@ -147,9 +147,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.getElementById('particles-canvas');
     if (canvas) {
         new ParticleNetwork(canvas, {
-            particleCount: 60,
+            particleCount: 70,
             connectionDistance: 160,
-            speed: 0.8
+            speed: 0.6,
+            particleColor: '#0891B2'
         });
     }
 });
