@@ -2,16 +2,20 @@
 const mobileMenu = document.getElementById('mobile-menu');
 const navMenu = document.querySelector('.nav-menu');
 
-mobileMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 // 点击导航链接后关闭移动端菜单
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        navMenu.classList.remove('active');
+        if (mobileMenu) {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
     });
 });
 
@@ -25,7 +29,7 @@ window.addEventListener('scroll', () => {
     if (currentScroll > 100) {
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     } else {
-        header.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.05)';
+        header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.05)';
     }
     
     lastScroll = currentScroll;
@@ -47,7 +51,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // 观察需要动画的元素
-document.querySelectorAll('.service-card, .product-category, .stat-item').forEach(el => {
+document.querySelectorAll('.service-card, .product-card, .stat-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -57,5 +61,6 @@ document.querySelectorAll('.service-card, .product-category, .stat-item').forEac
 // 平滑滚动已经通过CSS scroll-behavior: smooth实现了
 
 // 控制台欢迎信息
-console.log('%c陕西江南环保科技服务有限公司', 'color:#2E7D32;font-size:20px;font-weight:bold;');
-console.log('网站由AI助手精心设计制作');
+console.log('%c陕西江南环保科技服务有限公司', 'color:#0891B2;font-size:20px;font-weight:bold;');
+console.log('%c设计: Swiss Modernism 2.0', 'color:#16A34A;font-size:14px;');
+console.log('%c增加了 Canvas 粒子连线背景效果', 'color:#64748B;font-size:12px;');
