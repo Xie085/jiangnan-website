@@ -3,59 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陕西江南环保科技服务有限公司 - 专业环保解决方案提供商</title>
-    <meta name="description" content="陕西江南环保科技服务有限公司专注于环保咨询、环境监测、污水处理、固废治理等环保科技服务，国家级高新技术企业，国有控股。">
+    <title>陕西江南环保科技服务有限公司 - 专注环境保护，助力绿色发展</title>
+    <meta name="description" content="陕西江南环保科技服务有限公司，国家级高新技术企业，国有控股，专注于环保咨询、环境监测、污水处理、固废治理等环保科技服务。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- 粒子背景画布 -->
     <canvas id="particles-canvas" class="particles-canvas"></canvas>
 
-    <!-- 导航栏 -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1><span class="logo-dot"></span>江南环保</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">首页</a></li>
-                    <li><a href="#about">关于</a></li>
-                    <li><a href="#services">业务</a></li>
-                    <li><a href="#products">产品</a></li>
-                    <li><a href="#contact">联系</a></li>
-                </ul>
-                <div class="menu-toggle" id="mobile-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <!-- 导航 -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">J</div>
+                <div class="logo-text">
+                    <span class="logo-main">JIANGNAN</span>
+                    <span class="logo-sub">ENVIRONMENTAL TECHNOLOGY</span>
                 </div>
             </div>
-        </nav>
-    </header>
+            <div class="nav-menu">
+                <a href="#home">首页</a>
+                <a href="#about">关于我们</a>
+                <a href="#services">核心业务</a>
+                <a href="#products">产品设备</a>
+                <a href="#contact">联系我们</a>
+                <a href="#contact" class="btn-nav">在线咨询</a>
+            </div>
+            <button class="menu-toggle" id="mobile-menu-btn">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
 
-    <!-- 英雄区域 -->
+    <!-- 移动端菜单 -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-header">
+            <button class="mobile-menu-close" id="mobile-menu-close">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="#home" class="mobile-link">首页</a>
+            <a href="#about" class="mobile-link">关于我们</a>
+            <a href="#services" class="mobile-link">核心业务</a>
+            <a href="#products" class="mobile-link">产品设备</a>
+            <a href="#contact" class="mobile-link">联系我们</a>
+        </div>
+    </div>
+
+    <!-- Hero 区域 -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=2000" alt="环保科技">
+            <div class="hero-gradient"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="tag-line"></span>
+                    传承绿色，定义未来
+                </div>
                 <h1 class="hero-title">
                     绿色环保<br>
-                    <span class="hero-subtitle">科技创新</span>
+                    <em>科技创新</em>
                 </h1>
-                <p class="hero-description">专注环境保护，助力绿色发展</p>
-                <div class="hero-badges">
-                    <span class="badge">高新技术企业</span>
-                    <span class="badge">A级纳税人</span>
-                    <span class="badge">国有控股</span>
-                </div>
+                <p class="hero-desc">
+                    陕西江南环保科技服务有限公司，以"上善若水"为理念，专注环境保护领域，用科技赋能绿色发展，为客户提供一站式环保解决方案。
+                </p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">了解业务</a>
-                    <a href="#contact" class="btn btn-outline">联系我们</a>
+                    <a href="#services" class="btn-primary">
+                        了解业务
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
                 </div>
+            </div>
+        </div>
+        <div class="hero-side-tag">
+            <div class="vertical-text">
+                <span>XI'AN</span>
+                <span>SHAANXI</span>
+                <span>CHINA</span>
             </div>
         </div>
     </section>
@@ -63,16 +103,25 @@
     <!-- 关于我们 -->
     <section id="about" class="about section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">关于我们</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>国家级高新技术企业</h3>
-                    <p>陕西江南环保科技服务有限公司成立于2017年4月，是一家国有控股的高新技术企业，专注于环保科技领域的技术研发与专业服务。</p>
-                    <p>公司位于西安市经济技术开发区，注册资本1000万元，拥有专业的技术团队和先进的设备，致力于为客户提供一站式环保解决方案。</p>
-                    
+            <div class="about-grid">
+                <div class="about-image-wrap">
+                    <div class="about-image-main">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000" alt="环保科技">
+                    </div>
+                    <div class="about-image-deco"></div>
+                    <div class="about-badge">
+                        <p class="about-badge-number">8+</p>
+                        <p class="about-badge-text">年行业经验</p>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="section-subtitle">企业使命</p>
+                    <h2 class="section-title">让天更蓝，让水更清<br>在环保领域，创造持久价值。</h2>
+                    <div class="about-text">
+                        <p>陕西江南环保科技服务有限公司成立于2017年4月，是一家国有控股的国家级高新技术企业，专注于环保科技领域的技术研发与专业服务。</p>
+                        <p>我们坚信，科技应当服务于自然，通过创新技术重构绿水青山，已为上百个项目提供了专业环保解决方案，涵盖水污染治理、固废处理、环境监测等多个领域。</p>
+                    </div>
+
                     <div class="credentials-grid">
                         <div class="credential-item">
                             <div class="credential-icon">🏆</div>
@@ -104,84 +153,140 @@
                         </div>
                     </div>
 
-                    <div class="stats-grid">
+                    <div class="about-stats">
                         <div class="stat-item">
-                            <div class="stat-number">8+</div>
-                            <div class="stat-label">年行业经验</div>
+                            <p class="stat-number">8+</p>
+                            <p class="stat-label">年行业经验</p>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">100+</div>
-                            <div class="stat-label">完成项目</div>
+                            <p class="stat-number">100+</p>
+                            <p class="stat-label">完成项目</p>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">1000万</div>
-                            <div class="stat-label">注册资本</div>
+                            <p class="stat-number">1000万</p>
+                            <p class="stat-label">注册资本</p>
                         </div>
                     </div>
 
                     <div class="about-scope">
                         <h3>核心经营范围</h3>
-                        <div class="scope-grid">
-                            <div class="scope-item">环保咨询服务</div>
-                            <div class="scope-item">环境保护监测</div>
-                            <div class="scope-item">水污染治理</div>
-                            <div class="scope-item">污水处理</div>
-                            <div class="scope-item">固体废物治理</div>
-                            <div class="scope-item">化工产品销售</div>
-                            <div class="scope-item">软件开发</div>
-                            <div class="scope-item">仪器仪表制造</div>
-                            <div class="scope-item">仪器仪表销售</div>
-                            <div class="scope-item">园林绿化工程</div>
+                        <div class="scope-tags">
+                            <span class="scope-tag">环保咨询服务</span>
+                            <span class="scope-tag">环境保护监测</span>
+                            <span class="scope-tag">水污染治理</span>
+                            <span class="scope-tag">污水处理</span>
+                            <span class="scope-tag">固体废物治理</span>
+                            <span class="scope-tag">化工产品销售</span>
+                            <span class="scope-tag">软件开发</span>
+                            <span class="scope-tag">仪器仪表制造</span>
+                            <span class="scope-tag">仪器仪表销售</span>
+                            <span class="scope-tag">园林绿化工程</span>
                         </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <div class="placeholder-icon">🌿</div>
-                        <p>让天更蓝<br>让水更清</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 业务范围 -->
+    <!-- 核心业务 -->
     <section id="services" class="services section bg-light">
         <div class="container">
-            <div class="section-header">
+            <div class="services-header">
+                <p class="section-subtitle">战略核心板块</p>
                 <h2 class="section-title">核心业务</h2>
-                <div class="divider"></div>
+                <div class="title-divider"></div>
             </div>
+
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🌊</div>
-                    <h3>水污染治理</h3>
-                    <p>污水处理及其再生利用、水环境污染防治、非常规水源利用技术研发</p>
+                    <div class="service-bg"></div>
+                    <div class="service-content">
+                        <div class="service-icon">🌊</div>
+                        <h3>水污染治理</h3>
+                        <p>污水处理及其再生利用、水环境污染防治、非常规水源利用技术研发，专业处理各类水污染问题。</p>
+                        <a href="#contact" class="service-link">
+                            了解更多
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">♻️</div>
-                    <h3>固体废物治理</h3>
-                    <p>专业固体废物处理，农村生活垃圾经营性服务</p>
+                    <div class="service-bg" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800')"></div>
+                    <div class="service-content">
+                        <div class="service-icon">♻️</div>
+                        <h3>固体废物治理</h3>
+                        <p>专业固体废物处理，农村生活垃圾经营性服务，科学处理，绿色环保。</p>
+                        <a href="#contact" class="service-link">
+                            了解更多
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>环境保护监测</h3>
-                    <p>专业环境监测服务，水质污染物监测，提供准确可靠数据</p>
+                    <div class="service-bg" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800')"></div>
+                    <div class="service-content">
+                        <div class="service-icon">📊</div>
+                        <h3>环境保护监测</h3>
+                        <p>专业环境监测服务，水质污染物监测，提供准确可靠监测数据和分析报告。</p>
+                        <a href="#contact" class="service-link">
+                            了解更多
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💡</div>
-                    <h3>环保咨询服务</h3>
-                    <p>专业环保技术咨询，项目方案设计，工程管理服务</p>
+                    <div class="service-bg" style="background-image: url('https://images.unsplash.com/photo-1451187580459-434ddc0d578e?auto=format&fit=crop&q=80&w=800')"></div>
+                    <div class="service-content">
+                        <div class="service-icon">💡</div>
+                        <h3>环保咨询服务</h3>
+                        <p>专业环保技术咨询，项目方案设计，工程管理服务，助力项目顺利实施。</p>
+                        <a href="#contact" class="service-link">
+                            了解更多
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🏭</div>
-                    <h3>仪器仪表制造</h3>
-                    <p>环境监测专用仪器仪表、水质污染物监测设备制造</p>
+                    <div class="service-bg" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800')"></div>
+                    <div class="service-content">
+                        <div class="service-icon">🏭</div>
+                        <h3>仪器仪表制造</h3>
+                        <p>环境监测专用仪器仪表、水质污染物监测设备制造，品质保证。</p>
+                        <a href="#contact" class="service-link">
+                            了解更多
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🌳</div>
-                    <h3>园林绿化工程</h3>
-                    <p>园林绿化工程施工，改善生态环境，打造绿色空间</p>
+                    <div class="service-bg" style="background-image: url('https://images.unsplash.com/photo-1441974238690-4345901316f4?auto=format&fit=crop&q=80&w=800')"></div>
+                    <div class="service-content">
+                        <div class="service-icon">🌳</div>
+                        <h3>园林绿化工程</h3>
+                        <p>园林绿化工程施工，改善生态环境，打造绿色生态空间。</p>
+                        <a href="#contact" class="service-link">
+                            了解更多
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -190,10 +295,12 @@
     <!-- 产品设备 -->
     <section id="products" class="products section">
         <div class="container">
-            <div class="section-header">
+            <div class="products-header">
+                <p class="section-subtitle">产品中心</p>
                 <h2 class="section-title">产品设备</h2>
-                <div class="divider"></div>
+                <div class="title-divider"></div>
             </div>
+
             <div class="products-grid">
                 <div class="product-card">
                     <h4>监测设备</h4>
@@ -234,49 +341,54 @@
     </section>
 
     <!-- 联系我们 -->
-    <section id="contact" class="contact section bg-light">
+    <section id="contact" class="contact section">
+        <div class="contact-bg-deco">JN</div>
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">联系我们</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="contact-content">
+            <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>公司地址</h4>
-                            <p>陕西省西安市经济技术开发区未央路万科中心C401</p>
+                    <h2 class="contact-title">连接你我<br>共护绿色</h2>
+                    <p class="contact-desc">我们期待与各行各业的远见者同行。无论您身处何处，江南环保都是您最坚实的绿色合作伙伴。</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-block">
+                            <p class="block-label">中国 · 总部</p>
+                            <p class="block-content">陕西省西安市经济技术开发区<br>未央路万科中心C401</p>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h4>联系电话</h4>
-                            <p><a href="tel:029-88630598">029-88630598</a></p>
+                        <div class="contact-block">
+                            <p class="block-label">联系方式</p>
+                            <p class="block-content">电话：029-88630598<br>邮箱：1139055422@QQ.com</p>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>电子邮箱</h4>
-                            <p><a href="mailto:1139055422@QQ.com">1139055422@QQ.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📅</div>
-                        <div>
-                            <h4>成立时间</h4>
-                            <p>2017年04月11日</p>
+                        <div class="contact-credentials">
+                            <span class="cc-badge">高新技术企业</span>
+                            <span class="cc-badge">国有控股</span>
+                            <span class="cc-badge">A级纳税人</span>
                         </div>
                     </div>
                 </div>
-                <div class="contact-map">
-                    <div class="map-card">
-                        <div class="map-icon">🗺️</div>
-                        <h4>陕西省西安市</h4>
-                        <p>经济技术开发区未央路<br>万科中心C401</p>
-                    </div>
+
+                <div class="contact-form-wrapper">
+                    <h4>在线需求登记</h4>
+                    <form class="contact-form" onsubmit="return false;">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>您的姓名</label>
+                                <input type="text" placeholder="请输入姓名">
+                            </div>
+                            <div class="form-group">
+                                <label>联系电话</label>
+                                <input type="tel" placeholder="请输入电话">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>公司/机构名称</label>
+                            <input type="text" placeholder="请输入公司名称">
+                        </div>
+                        <div class="form-group">
+                            <label>留言详情</label>
+                            <textarea placeholder="请描述您的需求" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">提交咨询申请</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -286,27 +398,36 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>陕西江南环保科技服务有限公司</h3>
-                    <p>专业环保科技服务提供商</p>
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">J</div>
+                        <div>
+                            <span class="footer-logo-text">JIANGNAN</span>
+                            <br>
+                            <span class="footer-logo-sub">ENVIRONMENTAL</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">专注环境保护，助力绿色发展</p>
                 </div>
                 <div class="footer-links">
-                    <h4>快速链接</h4>
+                    <h5>快速链接</h5>
                     <ul>
+                        <li><a href="#home">首页</a></li>
                         <li><a href="#about">关于我们</a></li>
-                        <li><a href="#services">业务范围</a></li>
+                        <li><a href="#services">核心业务</a></li>
                         <li><a href="#products">产品设备</a></li>
                         <li><a href="#contact">联系我们</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>联系方式</h4>
-                    <p>电话：029-88630598</p>
-                    <p>邮箱：1139055422@QQ.com</p>
+                    <h5>联系方式</h5>
+                    <p>📍 陕西省西安市经济技术开发区未央路万科中心C401</p>
+                    <p>📞 029-88630598</p>
+                    <p>📧 1139055422@QQ.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> 陕西江南环保科技服务有限公司. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> 陕西江南环保科技服务有限公司. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
     </footer>
@@ -314,7 +435,6 @@
     <script src="js/particles.js"></script>
     <script src="script.js"></script>
     <script>
-        // 更新年份
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
